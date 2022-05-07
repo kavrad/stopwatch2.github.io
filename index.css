@@ -1,0 +1,825 @@
+/*The file 'index.css' adds the relevant styles to the respective elements present in the 'index.html' file*/
+
+/* The import statement imports all the font-styles present in the google fonts.this enaables the developer to add a variety of font-styles to our project*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Beau+Rivage&family=Concert+One&family=Exo+2:ital,wght@0,400;1,300;1,400&family=Josefin+Sans:ital@1&family=Lobster&family=Roboto+Serif:wght@300&family=Yellowtail&display=swap');
+
+/* this specifies the basic and relevant styles added to the body tag*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: radial-gradient(#9cdcff,#1cafff);
+    width: 100%;
+    height: 100vh;
+    background-repeat: repeat;
+    display: flex;
+}
+
+/* this specifies the basic and relevant styles added to the h1 tag*/
+h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+}
+
+/* this specifies the basic and relevant styles added to the span elemnt in h1 tag*/
+h1 span{
+    color: #262626;
+    background: #fff;
+    padding: 10px 20px;
+    font-family: arial;
+    display: table-cell;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc;
+    animation: animate .5s infinite;
+}  
+
+/* This statement adds animation to h1 tag */
+@keyframes animate {
+    0%{
+         transform: translateY(0px);
+         box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc, 0 15px 5px rgba(0,0,0,0);
+    }
+    50%{
+        transform: translateY(-20px);
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc, 0 15px 5px rgba(0,0,0,.6);
+    }
+    100%{
+        transform: translateY(0px);
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3) , 0 5px 0 #ccc, 0 15px 5px rgba(0,0,0,0);
+    }
+}
+/* Uses nth-child pseudo selector*/
+h1 span:nth-child(1){
+    animation-delay: .2s;
+}
+h1 span:nth-child(2){
+    animation-delay: .4s;
+}
+h1 span:nth-child(3){
+    animation-delay: .6s;
+}
+h1 span:nth-child(4){
+    animation-delay: .8s;
+}
+h1 span:nth-child(5){
+    animation-delay: 1s;
+}
+h1 span:nth-child(6){
+    animation-delay: 1.2s;
+}
+h1 span:nth-child(7){
+    animation-delay: 1.4s;
+}
+h1 span:nth-child(8){
+    animation-delay: 1.6s;
+}
+/* Adding basic styles to span element under class selector 'time-div'*/
+  .time-div .clock{
+    top: 30%;
+    position: absolute;
+    transform: translateX(-50%, -50%);
+    left: 30%;
+    font-size: 8rem;
+    letter-spacing: 0.7rem;
+    width: 80%;
+    height: 80vh;
+}
+.clock span{
+    
+    padding: 20px;
+    border-radius: 40%;
+    color: #fff;
+}
+
+.clock #seconds{
+    border: 4px solid rgb(74, 17, 17); 
+    padding: 40px;
+     border-radius: 60%; 
+     background: radial-gradient(darkblue,rgb(9, 5, 9)); 
+     box-shadow: inset 15px 15px 15px rgba(0,0,0,.3) , 10px 5px 0 #ccc; 
+}
+
+.clock #tens{
+    border: 4px solid rgb(74, 17, 17); 
+   padding: 40px;
+    border-radius: 50%; 
+    background: radial-gradient(darkblue,rgb(9, 5, 9)); 
+    box-shadow: inset 15px 15px 15px rgba(0,0,0,.3) , 10px 5px 0 #ccc; 
+}
+
+/* Adding Basic and relevant styles to button tag under under div tag with class selector 'button-div'*/
+.button-div{
+    top: 67%;
+    left: 25%;
+    transform: translateX(-50%, -50%);
+    position: absolute;
+    padding: 100px;
+    width: 100vw;
+}
+/* Adding styles to button tag with id 'start*/
+
+#start{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    width: 120px;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.1rem;
+    /* overflow: hidden; */
+    background: repeating-linear-gradient(45deg, #5c23d657 120px, purple 160px);
+    
+    font-weight: 700;
+    font-family: revert;
+    border-radius: 180px;
+}
+/* Adding styles to button tag with id 'stop*/
+
+#stop{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    width: 120px;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.1rem;
+    /* overflow: hidden; */
+    background: repeating-linear-gradient(45deg, #5c23d657 120px, purple 160px);
+    font-weight: 700;
+    font-family: revert;
+    border-radius: 180px;
+}
+/* Adding styles to button tag with id 'reset*/
+
+#reset{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    width: 120px;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.1rem;
+    /* overflow: hidden; */
+    background: repeating-linear-gradient(45deg, #5c23d657 120px, purple 160px);
+    font-weight: 700;
+    font-family: revert;
+    border-radius: 180px;
+    z-index: 10;
+}
+
+/* AAdding psuedo element-hover to add more styles to the button with their respective unique id selectors*/
+#reset:hover{
+    cursor: pointer;
+    background-color: linear-gradient(pink,yellow);
+    transition: 0.4s;
+    border: 2px solid red;
+    text-transform: capitalize;
+}
+
+#start:hover{
+    cursor: pointer;
+    background-color: linear-gradient(pink,yellow);
+    transition: 0.4s;
+    border: 2px solid red;
+    text-transform: capitalize;
+}
+
+#stop:hover{
+    cursor: pointer;
+    background-color: linear-gradient(pink,yellow);
+    transition: 0.4s;
+    border: 2px solid red;
+    text-transform: capitalize;
+}
+
+/* Adding CSS media queries for a responsive app at different breakpoints*/
+
+/* At 980px */
+@media (max-width:980px){
+    .time-div .clock{
+        left: 20%;
+        border-radius:50%;
+    }  
+    .time-div .clock #seconds{
+        padding:-10%;
+    }
+    .button-div{
+        left: 15%;
+    }
+}   
+
+/* At 959px */
+@media (max-width:959px){
+    .button-div{
+        left: 15%;
+    }
+}
+
+/* At 912px */
+@media (max-width:912px){
+    .button-div{
+       top: 65%;
+       left: 15%;
+    }
+}
+
+/* At 837px */
+@media (max-width:837px){
+    .button-div{
+       margin-left: -30%;
+       top: 55%;
+   }
+}
+
+/* At 824px */
+@media (max-width:824px){
+    .time-div .clock{
+        left: 20%;
+        border-radius:50%;
+    }  
+    .time-div .clock #seconds{
+        padding:30px;
+        font-size: 8vh;
+    }
+    .time-div .clock #tens{
+        padding:30px;
+        font-size: 8vh;
+    }
+    #colon{
+        padding: 10px;
+        width: 70px;
+        height: 100px;
+        font-size: 7vh;
+    }
+    .button-div{
+       left: 35%;
+    }
+}
+
+/* At 818px */
+@media (max-width:818px){
+    .button-div{
+       margin-top: 10%;
+    }
+}
+
+/* At 736px */
+@media (max-width:736px){
+  
+    .button-div{
+        width: 400px;
+        top: 40%;
+       left: 30%; 
+    }
+    .button-div #start{
+        width: 100px;
+        font-size: 3vh;
+        margin-left: 30%;
+       margin-top: 10%;
+       transform: translateX(70px);
+    }
+    .button-div #stop{
+        width: 100px;
+        font-size: 3vh;
+        top: 50%;
+        margin-top: 10%;
+        transform: translateX(70px);
+        
+    }
+    .button-div #reset{
+        width: 100px;
+        font-size: 3vh;
+        margin-top: 10%;
+        transform: translateX(70px);
+    }
+    h1{
+        width: 400px;
+        margin-left: -5%;
+    }
+    h1 span{
+        width: 55px;
+        padding: 10px;
+    }
+    .time-div .clock{
+        left: 10%;
+        top: 20%;
+    }
+    .button-div{
+        margin-top: 1%;
+    }
+ }
+
+ /* At 726px */
+  @media (max-width:726px){
+        h1{
+            width: 400px;
+            margin-left: 5%;
+        }
+        h1 span{
+            width: 40px;
+            padding: 5px 5px;
+            margin-left: -20%;
+        }
+        .time-div .clock{
+            margin-left: -20%;
+        }
+  }
+
+/* At 704px */
+@media (max-width:704px){
+    h1{
+        left: 35%;
+    }
+    .time-div .clock{
+        margin-left: 3%;
+    }
+}
+
+/* At 700px */
+@media (max-width:700px){
+    h1 span{
+        font-size: 4vw;
+        overflow-wrap: break-word;
+    }
+}
+
+/* At 678px */
+@media (max-width:678px){
+    .button-div{
+    font-size: 8vh;
+    width: 600px;
+    left: 15%;
+    }
+}
+
+/* At 671px */
+@media (max-width:671px){
+    .button-div{
+        left: 10%;
+    }
+    .button-div #reset{
+        width: 100px;
+        font-size: 3vh;
+        margin-top: 5%;
+        margin-left: 45%;
+    }
+}
+
+/* At 661px */
+@media (max-width:661px){
+    .time-div .clock{
+        left: -20%;
+    }
+    .button-div{
+        left: -10%;
+    }
+}
+/* At 651px */
+@media (max-width:651px){
+    .time-div .clock{
+        left: 30%;
+    }
+}
+/* At 628px */
+@media (max-width:632px){
+    .time-div .clock{
+    left: -1%;
+    }
+    .button-div{
+        left:-10%;
+    }
+}
+/* At 594px */
+@media (max-width:594px){
+    h1 span{
+        overflow-wrap: break-word;
+        padding: 15px 10px;
+        
+    }
+    h1{
+        width: 200px;
+        margin-left: -5%;
+    }
+} 
+
+/* At 564px */
+@media (max-width:564px){
+     .clock #seconds{
+       width: 80px;
+       font-size: 6vh;
+       padding: 20px;
+    }
+    .clock #tens{
+        width: 80px;
+        font-size: 6vh;
+        padding: 20px;
+     }
+}
+/* At 556px */
+@media (max-width:556px){
+     .time-div .clock{
+         width: 450px;
+         left: 10%;
+         
+     }
+     .clock #seconds{
+         padding: 10px;
+         
+     }
+     .clock #tens{
+        padding: 10px;
+        
+    }
+}
+
+/* At 539px */
+ @media (max-width:539px){
+    .button-div{
+        width: 450px;
+        transform: translateX(-5%);
+        margin-top: 20%;
+
+    }
+    .button-div #reset{
+        margin-left: 50%;
+    }
+}
+@media (max-width:535px){
+    .button-div{
+        margin-top: 40px;
+    }
+}
+/* At 528px */
+@media (max-width:528px){
+    .time-div .clock{
+        width: 400px;
+        left: 5%;
+        border-radius:50%;
+    }  
+    .time-div .clock #seconds{
+        padding:25px;
+        font-size: 6vh;
+    }
+    .time-div .clock #tens{
+        padding:25px;
+        font-size: 6vh;
+    }
+    #colon{
+        padding: 10px;
+        width: 70px;
+        height: 100px;
+        font-size: 7vh;
+    }
+    .button-div{
+        margin-top: 30px;
+        left: 5%;
+    }
+}
+
+/* At 510px */
+@media (max-width:510px){
+    .time-div .clock{
+        margin-left: 5%;
+    }
+}   
+/* At 474px */
+@media (max-width:474px){
+    .button-div{
+        margin-top: 30%;
+    }
+}
+/* At 435px */
+@media (max-width:435px){
+    .button-div{
+        left: -20%;
+    }
+    .time-div .clock{
+        width:500px;
+        left: 5%;
+    }
+}
+/* At 460px */
+@media (max-width:460px){
+    .button-div{
+        top: 30%;
+        left: -5%;
+    }
+}
+/* At 397px */
+@media (max-width:397px){
+    .button-div{
+      left: -30%;
+        
+    }
+    .time-div .clock{
+        margin-left: -10%;
+    }
+}   
+
+/*At 387px */
+@media (max-width:387px){
+    .time-div .clock{
+        width: 400px;
+        left: 15%;
+        border-radius:50%;
+    }  
+    .time-div .clock #seconds{
+        padding: 20px;
+        font-size: 5vh;
+    }
+    .time-div .clock #tens{
+        padding: 20px;;
+        font-size: 5vh;
+        
+    }
+    #colon{
+        padding: 10px;
+        width: 70px;
+        height: 100px;
+        font-size: 7vh;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+/* At 376px */
+@media (max-width:376px){
+    .button-div{
+        left: -30%;
+        margin-top: 10%;
+    }
+    .time-div .clock{
+        margin-left: -10%;
+        margin-top: 20%;
+    }
+    h1{
+        margin-left: 10%;
+    }
+}
+    /* At 365px */
+    @media (max-width:365px){
+        margin-top: 10%;
+        
+    }
+/* At 340px */
+@media (max-width:340px){
+    .button-div{
+       width: 450px;
+       margin-top: 30%;
+       left: -25%;
+    }
+}
+
+/*At 328px*/
+@media (max-width:330px){
+    .button-div{
+      left: -20%;
+       margin-top: 30px;
+    }
+    .time-div .clock{
+        margin-left: 10%;
+    }
+    h1{
+       margin-left: 25%; 
+    }
+}
+
+/* At 318px */
+@media (max-width:318px){
+    .button-div{
+        margin-left: -40%;
+    }
+}
+
+/* At 274px */
+@media (max-width:274px){
+    h1 span{
+        overflow-wrap: break-word;
+        padding: 15px 10px;
+    }
+}   
+
+/* At 265px */
+@media (max-width:265px){
+    .time-div .clock{
+        width: 300px;
+        left: 30%;
+        border-radius:50%;
+    }  
+    .time-div .clock #seconds{
+        padding: 15px;
+        font-size: 7vh;
+    }
+    .time-div .clock #tens{
+        padding: 15px;
+        font-size: 7vh;
+        
+    }
+    #colon{
+        padding: 8px;
+        width: 70px;
+        height: 100px;
+        font-size: 7vh;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    h1{
+        margin-left: 20%;
+    }
+} 
+/* At 258px */
+@media (max-width:258px){
+    h1{
+        margin-left: 10%;
+    }
+}
+/* At 236px */
+@media and (max-width:236px){
+    h1{
+       transform:translateX(10%);
+    }
+}
+/* At 244px */
+@media (max-width:244px){
+    h1 span{
+        
+        padding: 20px 10px;
+        width: 40px;
+    }    
+    h1{
+        word-wrap: break-word;
+        text-align: center;
+        width: 176px;
+    }
+}
+
+/* At 236px */
+@media (max-width:236px){
+    h1 span{
+        
+        padding: 10px 10px;
+        width: 15px;
+    }    
+    h1{
+        word-wrap: break-word;
+        width: 136px;
+        margin-left: 2%;
+    }    
+}
+
+/* At 201px */
+@media (max-width: 201px){
+    h1 span{
+        
+        padding: 10px 10px;
+        width: 12px;
+    }    
+    h1{
+        word-wrap: break-word;
+        width: 110px;
+        margin-left: 6%;
+    }
+} 
+
+/* At 182px */
+@media (max-width:182px){
+    h1{
+        width: 120px;
+       margin-left: 10%;
+    }
+    h1 span{
+        font-size: 6vh;
+        width: 20px;
+        padding: 10px 10px;
+    }
+    .time-div .clock{
+        margin-left: 10%;
+    }
+    .button-div{
+        margin-left: -80%;
+        font-size: 8vh;
+    }   
+}
+/* At 162px */
+@media (max-width:162px){
+    .button-div{
+    font-size: 6vh;
+    }
+} 
+/* At 125px */
+@media (max-width:125px){
+    .button-div{
+       transform: translateX(-15%);
+       
+    }
+    .button-div #start{
+        width: 180px;
+        font-size: 6vh;
+    }
+    .button-div #stop{
+        width: 180px;
+        font-size: 6vh;
+        margin-left: 30%;
+    }
+    .button-div #reset{
+        width: 180px;
+        font-size: 6vh;
+        margin-left: 30%;
+    }
+}
+  /*At 114px */
+@media (max-width: 114px){
+    h1 span{
+        
+        padding: 5px 5px;
+        width: 10px;
+        
+    }
+    h1{
+        word-wrap: break-word;
+        width: 90px;
+        margin-left: 8%;
+    }
+} 
+/* At 108px */
+@media (max-width:108px){
+    h1{
+
+
+      width: 100px;
+      word-wrap: break-word;
+    }
+}
+
+/* At 107px */
+@media (max-width: 107px){
+    h1 span{
+        
+        padding: 2px 4px;
+        width: 5px;
+    }    
+    h1{
+        word-wrap: break-word;
+        width: 50px;
+        margin-left: 50%;
+    }
+}
+   /* At 79px  */
+   @media (max-width:80px){
+       .button-div{
+           margin-left: -100px;
+       }
+   }
+   /* At 52px */
+   @media (max-width:52px){
+       .time-div .clock{
+           width:40px;
+           display: block;
+       }    
+      .clock #colon{
+         display: block;
+         width: 5px;
+         padding: 2px;
+      } 
+       .button-div{
+          top: 70%;
+          margin-left: -180px;
+       }
+   }
+     
+
+
+
+
+
+
+    
+
+
+
+     
+
+
+       
+        
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
